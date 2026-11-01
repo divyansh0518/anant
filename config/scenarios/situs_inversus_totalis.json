@@ -1,0 +1,19 @@
+{
+  "id": "situs_inversus_totalis",
+  "title": "Situs inversus totalis with dextrocardia (rare presentation)",
+  "rare": true,
+  "patient": {"name": "Anita", "age": 29, "sex": "female",
+    "chief_complaint": "Lower belly pain since last night, mostly on the left side.",
+    "history": "Pain started around the belly button and settled in the left lower abdomen. Nausea and reduced appetite, low-grade fever. Chronic sinus infections since childhood. She was told long ago that her heart is 'on the other side' but has never had further workup."},
+  "vitals": {"HR": "98 bpm", "BP": "112/70 mmHg", "RR": "18 /min", "Temp": "37.8 C", "SpO2": "99 %"},
+  "palpation": {
+    "abd_llq": {"tenderness": 3, "rebound": true, "say": "Ouch, right there on the left side!", "deep_say": "Please stop, that really hurts!", "rebound_say": "Aaah! Worse when you take your hand away!", "expression": "pain"},
+    "abd_rlq": {"tenderness": 0}, "periumbilical": {"tenderness": 1, "say": "A bit sore there.", "expression": "pain"}
+  },
+  "auscultation": {
+    "chest_r5ics": {"description": "Apex beat and heart sounds are loudest on the RIGHT 5th intercostal space. Normal S1, S2."},
+    "chest_apex": {"description": "Heart sounds faint on the left side."}
+  },
+  "teaching_layers": ["heart_dextro", "liver_mirror", "stomach_mirror", "appendix_left"],
+  "teaching_points": ["Dextrocardia: apex beat on the right.", "Appendicitis in situs inversus presents with LEFT lower quadrant pain, a classic diagnostic trap.", "Kartagener syndrome (primary ciliary dyskinesia): sinusitis, bronchiectasis, situs inversus."]
+}

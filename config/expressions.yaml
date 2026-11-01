@@ -1,0 +1,9 @@
+# Facial expression presets: joint name -> servo degrees.  Unlisted joints are untouched.
+expressions:
+  - {id: 0, name: neutral,   joints: {brow_l: 90,  brow_r: 90,  mouth_corner_l: 90,  mouth_corner_r: 90,  cheek_l: 90,  cheek_r: 90,  eyelid_l: 100, eyelid_r: 100, jaw: 70}}
+  - {id: 1, name: happy,     joints: {brow_l: 95,  brow_r: 95,  mouth_corner_l: 130, mouth_corner_r: 130, cheek_l: 120, cheek_r: 120, eyelid_l: 95,  eyelid_r: 95,  jaw: 72}}
+  - {id: 2, name: sad,       joints: {brow_l: 70,  brow_r: 110, mouth_corner_l: 55,  mouth_corner_r: 55,  cheek_l: 80,  cheek_r: 80,  eyelid_l: 85,  eyelid_r: 85,  jaw: 70}}
+  - {id: 3, name: surprised, joints: {brow_l: 130, brow_r: 130, mouth_corner_l: 95,  mouth_corner_r: 95,  cheek_l: 95,  cheek_r: 95,  eyelid_l: 110, eyelid_r: 110, jaw: 95}}
+  - {id: 4, name: pain,      joints: {brow_l: 65,  brow_r: 65,  mouth_corner_l: 60,  mouth_corner_r: 60,  cheek_l: 70,  cheek_r: 70,  eyelid_l: 60,  eyelid_r: 60,  jaw: 80}}
+  - {id: 5, name: angry,     joints: {brow_l: 60,  brow_r: 60,  mouth_corner_l: 70,  mouth_corner_r: 70,  cheek_l: 85,  cheek_r: 85,  eyelid_l: 90,  eyelid_r: 90,  jaw: 70}}
+  - {id: 6, name: thinking,  joints: {brow_l: 110, brow_r: 80,  mouth_corner_l: 85,  mouth_corner_r: 95,  cheek_l: 90,  cheek_r: 90,  eyelid_l: 95,  eyelid_r: 95,  eye_yaw: 110}}

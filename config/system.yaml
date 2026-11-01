@@ -1,0 +1,43 @@
+link:
+  type: serial
+  jetson_port: /dev/ttyUSB0     # Jetson side of the link (USB-serial or UART)
+  pi_port: /dev/ttyUSB0         # Pi side (use /dev/serial0 for the GPIO UART)
+  baud: 921600
+  sim_host: 127.0.0.1
+  sim_port: 7777
+
+pi:
+  control_hz: 50
+  touch_hz: 25
+  watchdog_s: 1.0               # no heartbeat from Jetson -> hold position
+
+llm:
+  base_url: http://localhost:11434/v1   # any OpenAI-compatible endpoint (Ollama, llama.cpp, cloud)
+  model: llama3.2:3b
+  api_key: ""
+  timeout_s: 30
+
+voice:
+  vosk_model_path: models/vosk-model-small-en-in-0.4
+  sample_rate: 16000
+  tts_binary: espeak-ng
+  tts_voice: en-in
+  tts_rate: 165
+
+camera:
+  index: 0
+  width: 640
+  height: 480
+  identify_interval_s: 1.0
+
+projector:
+  enabled: true
+  window_pos: [1920, 0]         # top-left of the projector display in desktop coordinates
+  size: [1280, 720]
+  # Projector-pixel position of the four corners of the torso rectangle
+  # (TL, TR, BR, BL). Re-measure whenever the projector or the robot moves.
+  quad: [[300, 60], [980, 60], [980, 660], [300, 660]]
+
+xr:
+  host: 0.0.0.0
+  port: 8765

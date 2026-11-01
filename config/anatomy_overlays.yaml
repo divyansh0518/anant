@@ -1,0 +1,17 @@
+# Anatomy layers for the torso-mounted projector, in a unit square (0,0 top-left .. 1,1 bottom-right)
+# as seen by the examiner facing the robot (patient's right = examiner's left).
+# Colours are BGR.  Re-tune after calibrating projector.quad in system.yaml.
+layers:
+  lung_r:        {c: [0.34, 0.25], r: [0.12, 0.17],  color: [255, 200, 120], label: "R lung"}
+  lung_l:        {c: [0.66, 0.25], r: [0.12, 0.17],  color: [255, 200, 120], label: "L lung"}
+  heart:         {c: [0.56, 0.30], r: [0.08, 0.09],  color: [60, 60, 255],   label: "Heart"}
+  aortic_area:   {c: [0.43, 0.14], r: [0.03, 0.03],  color: [0, 220, 255],   label: "Aortic area"}
+  liver:         {c: [0.36, 0.50], r: [0.16, 0.08],  color: [60, 140, 255],  label: "Liver"}
+  stomach:       {c: [0.64, 0.47], r: [0.09, 0.08],  color: [120, 220, 120], label: "Stomach"}
+  appendix:      {c: [0.40, 0.76], r: [0.03, 0.04],  color: [0, 200, 255],   label: "Appendix / McBurney"}
+  caecum:        {c: [0.38, 0.72], r: [0.06, 0.05],  color: [140, 200, 255], label: "Caecum"}
+  # mirrored layers for situs inversus totalis
+  heart_dextro:  {c: [0.44, 0.30], r: [0.08, 0.09],  color: [60, 60, 255],   label: "Heart (dextrocardia)"}
+  liver_mirror:  {c: [0.64, 0.50], r: [0.16, 0.08],  color: [60, 140, 255],  label: "Liver (left-sided)"}
+  stomach_mirror: {c: [0.36, 0.47], r: [0.09, 0.08], color: [120, 220, 120], label: "Stomach (right-sided)"}
+  appendix_left: {c: [0.60, 0.76], r: [0.03, 0.04],  color: [0, 200, 255],   label: "Appendix (left-sided)"}

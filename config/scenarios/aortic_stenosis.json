@@ -1,0 +1,17 @@
+{
+  "id": "aortic_stenosis",
+  "title": "Aortic stenosis",
+  "rare": false,
+  "patient": {"name": "Mohan", "age": 68, "sex": "male",
+    "chief_complaint": "I get breathless and feel a tightness in my chest when I climb stairs.",
+    "history": "Gradually worsening breathlessness on exertion over 8 months. Two episodes of nearly fainting while walking uphill. Chest tightness on effort that settles with rest. Hypertension, on amlodipine. No smoking history."},
+  "vitals": {"HR": "78 bpm", "BP": "128/84 mmHg", "RR": "16 /min", "Temp": "36.8 C", "SpO2": "96 %"},
+  "palpation": {"chest_apex": {"tenderness": 0}},
+  "auscultation": {
+    "chest_r2ics": {"description": "Harsh crescendo-decrescendo systolic ejection murmur, loudest at the aortic area, radiating towards the carotids. Soft S2.", "audio": "aortic_stenosis.wav"},
+    "chest_apex": {"description": "S1 normal, systolic murmur audible but softer."},
+    "chest_l2ics": {"description": "Systolic murmur, softer than aortic area."}
+  },
+  "teaching_layers": ["heart", "aortic_area", "lung_l", "lung_r"],
+  "teaching_points": ["Triad: exertional dyspnoea, angina, syncope.", "Auscultate with the patient leaning forward in held expiration.", "Check slow-rising pulse and narrow pulse pressure."]
+}

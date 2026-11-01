@@ -1,0 +1,21 @@
+# Silicone resistive touch skin: 16 zones on 4x ADS1115 (0x48..0x4B), 4 channels each.
+# Add a CD74HC4067 analog mux per ADC channel to scale beyond 16 zones.
+zones:
+  - {id: 0,  name: forehead,        ads: 0x48, channel: 0}
+  - {id: 1,  name: cheek_l,         ads: 0x48, channel: 1}
+  - {id: 2,  name: cheek_r,         ads: 0x48, channel: 2}
+  - {id: 3,  name: shoulder_r,      ads: 0x48, channel: 3}
+  - {id: 4,  name: hand_r,          ads: 0x49, channel: 0}
+  - {id: 5,  name: hand_l,          ads: 0x49, channel: 1}
+  - {id: 6,  name: chest_r2ics,     ads: 0x49, channel: 2}   # right 2nd intercostal space (aortic area)
+  - {id: 7,  name: chest_l2ics,     ads: 0x49, channel: 3}   # left 2nd intercostal space (pulmonic area)
+  - {id: 8,  name: chest_apex,      ads: 0x4A, channel: 0}   # left 5th ICS, mid-clavicular (mitral / apex)
+  - {id: 9,  name: chest_r5ics,     ads: 0x4A, channel: 1}   # right 5th ICS (apex in dextrocardia)
+  - {id: 10, name: epigastric,      ads: 0x4A, channel: 2}
+  - {id: 11, name: abd_ruq,         ads: 0x4A, channel: 3}
+  - {id: 12, name: abd_luq,         ads: 0x4B, channel: 0}
+  - {id: 13, name: abd_rlq,         ads: 0x4B, channel: 1}   # includes McBurney's point
+  - {id: 14, name: abd_llq,         ads: 0x4B, channel: 2}
+  - {id: 15, name: periumbilical,   ads: 0x4B, channel: 3}
+touch_threshold: 250        # raw counts above baseline that count as contact (0..4095 scale)
+report_delta: 120           # min change before a new reading is reported

@@ -1,0 +1,47 @@
+# ANANT joint map.  id = board*16 + channel.   Angles are servo degrees.
+# This is a TEMPLATE: calibrate min / max / home / sign for every servo on your build.
+# Flip `sign` (+1 / -1) if a joint moves opposite to the XR operator's motion.
+pca9685_addresses: [0x40, 0x41, 0x42]
+default_speed_dps: 120
+joints:
+  # --- head (board 0) ---
+  - {id: 0,  name: neck_yaw,         board: 0, channel: 0,  min: 30,  max: 150, home: 90}
+  - {id: 1,  name: neck_pitch,       board: 0, channel: 1,  min: 60,  max: 120, home: 90}
+  - {id: 2,  name: neck_roll,        board: 0, channel: 2,  min: 70,  max: 110, home: 90}
+  - {id: 3,  name: jaw,              board: 0, channel: 3,  min: 70,  max: 105, home: 70, speed: 400}
+  - {id: 4,  name: eye_yaw,          board: 0, channel: 4,  min: 60,  max: 120, home: 90, speed: 300}
+  - {id: 5,  name: eye_pitch,        board: 0, channel: 5,  min: 70,  max: 110, home: 90, speed: 300}
+  - {id: 6,  name: eyelid_l,         board: 0, channel: 6,  min: 40,  max: 110, home: 100, speed: 600}
+  - {id: 7,  name: eyelid_r,         board: 0, channel: 7,  min: 40,  max: 110, home: 100, speed: 600}
+  # --- silicone face actuation (board 0) ---
+  - {id: 8,  name: brow_l,           board: 0, channel: 8,  min: 50,  max: 130, home: 90}
+  - {id: 9,  name: brow_r,           board: 0, channel: 9,  min: 50,  max: 130, home: 90}
+  - {id: 10, name: mouth_corner_l,   board: 0, channel: 10, min: 40,  max: 140, home: 90}
+  - {id: 11, name: mouth_corner_r,   board: 0, channel: 11, min: 40,  max: 140, home: 90}
+  - {id: 12, name: cheek_l,          board: 0, channel: 12, min: 60,  max: 130, home: 90}
+  - {id: 13, name: cheek_r,          board: 0, channel: 13, min: 60,  max: 130, home: 90}
+  # --- right arm + hand (board 1) ---
+  - {id: 16, name: r_shoulder_pitch, board: 1, channel: 0,  min: 0,   max: 180, home: 10}
+  - {id: 17, name: r_shoulder_roll,  board: 1, channel: 1,  min: 0,   max: 110, home: 10}
+  - {id: 18, name: r_shoulder_yaw,   board: 1, channel: 2,  min: 30,  max: 150, home: 90}
+  - {id: 19, name: r_elbow,          board: 1, channel: 3,  min: 10,  max: 150, home: 10}
+  - {id: 20, name: r_wrist_roll,     board: 1, channel: 4,  min: 0,   max: 180, home: 90}
+  - {id: 21, name: r_thumb,          board: 1, channel: 5,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 22, name: r_index,          board: 1, channel: 6,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 23, name: r_middle,         board: 1, channel: 7,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 24, name: r_ring,           board: 1, channel: 8,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 25, name: r_pinky,          board: 1, channel: 9,  min: 20,  max: 160, home: 20, speed: 300}
+  # --- left arm + hand (board 2) ---
+  - {id: 32, name: l_shoulder_pitch, board: 2, channel: 0,  min: 0,   max: 180, home: 10}
+  - {id: 33, name: l_shoulder_roll,  board: 2, channel: 1,  min: 0,   max: 110, home: 10}
+  - {id: 34, name: l_shoulder_yaw,   board: 2, channel: 2,  min: 30,  max: 150, home: 90}
+  - {id: 35, name: l_elbow,          board: 2, channel: 3,  min: 10,  max: 150, home: 10}
+  - {id: 36, name: l_wrist_roll,     board: 2, channel: 4,  min: 0,   max: 180, home: 90}
+  - {id: 37, name: l_thumb,          board: 2, channel: 5,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 38, name: l_index,          board: 2, channel: 6,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 39, name: l_middle,         board: 2, channel: 7,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 40, name: l_ring,           board: 2, channel: 8,  min: 20,  max: 160, home: 20, speed: 300}
+  - {id: 41, name: l_pinky,          board: 2, channel: 9,  min: 20,  max: 160, home: 20, speed: 300}
+  # --- torso (board 2) ---
+  - {id: 42, name: torso_yaw,        board: 2, channel: 10, min: 60,  max: 120, home: 90, speed: 60}
+  - {id: 43, name: torso_pitch,      board: 2, channel: 11, min: 80,  max: 100, home: 90, speed: 40}

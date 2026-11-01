@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anant-humanoid"
+version = "0.1.0"
+description = "ANANT: dual-mode AI humanoid and medical training simulator"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = ["pyyaml>=6.0", "numpy>=1.20", "pyserial>=3.5"]
+
+[project.scripts]
+anant-pi = "anant.pi.main:main"
+anant-jetson = "anant.jetson.main:main"
+anant-xr = "anant.xr.server:main"
+
+[tool.setuptools.packages.find]
+include = ["anant*"]

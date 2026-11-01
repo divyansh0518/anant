@@ -1,0 +1,20 @@
+{
+  "id": "acute_appendicitis",
+  "title": "Acute appendicitis",
+  "rare": false,
+  "patient": {"name": "Rohan", "age": 22, "sex": "male",
+    "chief_complaint": "Stomach pain since yesterday that has moved to the lower right side.",
+    "history": "Pain began around the belly button, moved to the right lower abdomen over 12 hours. Nausea, no appetite, one episode of vomiting. Low-grade fever. Pain worse when walking or coughing. No previous surgery. No medications. No allergies."},
+  "vitals": {"HR": "104 bpm", "BP": "118/74 mmHg", "RR": "18 /min", "Temp": "37.9 C", "SpO2": "98 %"},
+  "palpation": {
+    "abd_rlq": {"tenderness": 3, "rebound": true, "say": "Ow! That is exactly where it hurts.", "deep_say": "Aaah, please stop, that really hurts!", "rebound_say": "Aaaah! It hurts even more when you let go!", "expression": "pain"},
+    "periumbilical": {"tenderness": 1, "say": "That is a little sore.", "expression": "pain"},
+    "abd_ruq": {"tenderness": 0}, "abd_luq": {"tenderness": 0}, "abd_llq": {"tenderness": 1, "say": "Hmm, that makes the right side hurt.", "expression": "pain"}
+  },
+  "auscultation": {
+    "chest_apex": {"description": "Normal S1 and S2, no murmurs."},
+    "abd_rlq": {"description": "Bowel sounds reduced."}
+  },
+  "teaching_layers": ["caecum", "appendix"],
+  "teaching_points": ["Classic migration of pain from periumbilical region to RLQ.", "Assess McBurney's point tenderness, rebound tenderness and guarding.", "Consider Rovsing's, psoas and obturator signs."]
+}
